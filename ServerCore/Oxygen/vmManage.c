@@ -27,6 +27,7 @@ int heartBeat(char *port){
 }
 
 //add database value checks (just for double checking...)
+//VMID should be a 4 digit number
 
 int generateSubVM(char *owner,char *vmid, char *hasauto, char *cbpack, char *mdir){
     printf("Debugging ON\n");
@@ -41,6 +42,23 @@ int generateSubVM(char *owner,char *vmid, char *hasauto, char *cbpack, char *mdi
         if(macos_run_ge(copyMaster)==0){
             printf("Master Image Copy Success\n");
             //Set Custom Port
+            char attach[BUFF];
+            sprintf(attach,"cd Users/%s/%s/ && hdiutil attach -imagekey diskimage-class=CRawDiskImage hfs.main",owner,vmid);
+            system(attach);
+            char repval[4000];
+            sprintf(repval,"sudo sed -i '' 's/2244/%s/g' /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/tcptunnel.plist",vmid);
+            printf("REPVAL IS -> %s",repval);
+            system("cp /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/tcptunnel.plist ~/t.plist");
+            system(repval);
+            system("cp /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/tcptunnel.plist ~/patched.plist");
+            system("hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk");
+            printf("Eject Succes\n");
+            system(attach);
+            system("hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk");
+            char attachsec[BUFF];
+            sprintf(attachsec,"cd Users/%s/%s/ && hdiutil attach -imagekey diskimage-class=CRawDiskImage hfs.main",owner,vmid);
+            system(attachsec);
+            system("hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk");
         } else{
             printf("Error Copying Master Image..\n");
         }
