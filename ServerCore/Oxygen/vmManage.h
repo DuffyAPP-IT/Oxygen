@@ -6,3 +6,4 @@
 #define OXYGEN_VMMANAGE_H
 
 #endif //OXYGEN_VMMANAGE_H
+int heartBeat(char *port);
