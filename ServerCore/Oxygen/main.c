@@ -1,5 +1,6 @@
 #define VERSION 0
 #include <stdio.h>
+#include <stdlib.h>
 #include "string.h"
 #include "vmManage.h"
 
@@ -11,8 +12,14 @@ int main(int argc, char *argv[]) {
     if(argv[1]==0){
         printf("Invalid Request To Oxygen...\n");
         return 1;
-    }else if(strcmp(argv[1],"-h")==0){
+    }else if(strcmp(argv[1],"-h")==0) {
         printf("Check Oxygen Instructions -> Oxygen.pdf\n");
+        return 0;
+    }else if(strcmp(argv[1],"-i")==0) {
+        printf("Initialising Oxygen Server...\n");
+        system("mkdir ServerData ServerData/Master ServerData/Users");
+        system("cp vmCreate.sh ServerData/Master");
+        system("cd ServerData/Master && ./vmCreate.sh");
         return 0;
     }else if(strcmp(argv[1],"-c")==0){
         printf("Oxygen -> Create...\n");

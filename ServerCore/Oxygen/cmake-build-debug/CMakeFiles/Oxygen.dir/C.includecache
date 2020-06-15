@@ -6,19 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/iLibX.h
-
-/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/vmManage.c
-vmManage.h
-/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/vmManage.h
+/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/main.c
 stdio.h
 -
-sys/wait.h
--
-iLibX.h
-/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/iLibX.h
 stdlib.h
 -
+string.h
+/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/string.h
+vmManage.h
+/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/vmManage.h
 
 /Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/vmManage.h
 
