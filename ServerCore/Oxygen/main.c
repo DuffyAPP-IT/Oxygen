@@ -30,6 +30,13 @@ int main(int argc, char *argv[]) {
             return 1;
         }
         printf("Creating!\n");
+        generateSubVM(argv[2],argv[3],argv[4],argv[2],"Master/*");
+    }
+    else if(strcmp(argv[1],"-s")==0){
+        //verify owner and vmid are present...
+        printf("Starting VMID -> %s\n",argv[2]);
+        startVM(argv[2],argv[3]);
+        return 0;
     }
 
         //generate random number to return as main output? file with info maybe

@@ -5,6 +5,9 @@
 #include "vmManage.h"
 #include <stdio.h>
 #include <sys/wait.h>
+#include "iLibX.h"
+#include <stdlib.h>
+#define BUFF 800
 
 //Pass port of VM, returns 0 if VM active and accepting SSH transmissions
 int heartBeat(char *port){
@@ -26,5 +29,28 @@ int heartBeat(char *port){
 //add database value checks (just for double checking...)
 
 int generateSubVM(char *owner,char *vmid, char *hasauto, char *cbpack, char *mdir){
-    
+    printf("Debugging ON\n");
+    //Create User Directory
+    char ownercreate[BUFF];
+    sprintf(ownercreate,"mkdir Users/%s Users/%s/%s",owner,owner,vmid);
+    if(macos_run_ge(ownercreate)==0){
+        printf("Directory Structure Create Success\n");
+        //Copy Master Files
+        char copyMaster[BUFF];
+        sprintf(copyMaster,"cp -R Master/* Users/%s/%s/",owner,vmid);
+        if(macos_run_ge(copyMaster)==0){
+            printf("Master Image Copy Success\n");
+            //Set Custom Port
+        } else{
+            printf("Error Copying Master Image..\n");
+        }
+    }
+}
+
+void startVM(char *owner, char *vmid){
+    printf("STARTVM CALLED");
+    char vmStart[4000];
+    sprintf(vmStart,"cd Users/%s/%s/ && xnu-qemu-arm64/aarch64-softmmu/qemu-system-aarch64 -M iPhone6splus-n66-s8000,kernel-filename=kernelcache.release.n66.out,dtb-filename=dtree,driver-filename=aleph_bdev_drv.bin,qc-file-0-filename=hfs.main,qc-file-1-filename=hfs.sec,tc-filename=static_tc,kern-cmd-args=\"debug=0x8 kextlog=0xfff cpus=1 rd=disk0 serial=2\",xnu-ramfb=on -cpu max -m 6G -serial mon:stdio",owner,vmid);
+    printf("%s",vmStart);
+    system(vmStart);
 }

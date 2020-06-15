@@ -7,3 +7,5 @@
 
 #endif //OXYGEN_VMMANAGE_H
 int heartBeat(char *port);
+int generateSubVM(char *owner,char *vmid, char *hasauto, char *cbpack, char *mdir);
+void startVM(char *owner, char *vmid);
