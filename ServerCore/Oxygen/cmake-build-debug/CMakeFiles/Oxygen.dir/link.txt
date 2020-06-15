@@ -1,0 +1,1 @@
+/usr/bin/gcc -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Oxygen.dir/main.c.o CMakeFiles/Oxygen.dir/vmManage.c.o CMakeFiles/Oxygen.dir/iLibX.c.o  -o Oxygen 

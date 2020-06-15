@@ -1,0 +1,10 @@
+//Launching Oxygen Help
+./Oxygen -h
+
+//Creating New VM
+./Oxygen -c OWNERID VMID HASAUTORUN CBPACK?
+For example:
+./Oxygen -c 18391 921732 1 0
+or
+./Oxygen -c 18391 921732 1 research.zip //need to grab cbpack from user uploaded file, set with unique name or from prebuild packs.
+

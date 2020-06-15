@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=gcc -G "CodeBlocks - Unix Makefiles" /Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug

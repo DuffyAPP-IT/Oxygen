@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/main.c
+stdio.h
+-
+string.h
+/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/string.h
+
