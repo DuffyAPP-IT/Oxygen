@@ -39,9 +39,9 @@ python3 xnu-qemu-arm64-tools/bootstrap_scripts/asn1dtredecode.py odtre dtree
 echo STEP7
 #extract symbols & compile bdev_drv
 nm kernelcache.release.n66.out > symbols.nm
-export XNU_SOURCES=/Users/jamesduffy/Documents/Research/T5/R5/R4/darwin-xnu
-export KERNEL_SYMBOLS_FILE=/Users/jamesduffy/Documents/Research/T5/R5/R4/symbols.nm
-export QEMU_DIR=/Users/jamesduffy/Documents/Research/T5/R5/R4/xnu-qemu-arm64
+export XNU_SOURCES=/Users/research/Oxygen/darwin-xnu
+export KERNEL_SYMBOLS_FILE=/Users/research/Oxygen/symbols.nm
+export QEMU_DIR=/Users/research/Oxygen/xnu-qemu-arm64
 export NUM_BLOCK_DEVS=2
 make -C xnu-qemu-arm64-tools/aleph_bdev_drv
 cp ./xnu-qemu-arm64-tools/aleph_bdev_drv/bin/aleph_bdev_drv.bin ./
