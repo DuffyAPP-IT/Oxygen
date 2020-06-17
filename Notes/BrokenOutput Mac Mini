@@ -1,0 +1,496 @@
+Last login: Wed Jun 17 15:25:04 on ttys000
+jd@AdminUsers-Mac-mini ~ % /bin/bash
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$ cd /Users/jd/Documents/Oxygen/oxygenData/Master 
+bash-3.2$ xnu-qemu-arm64/aarch64-softmmu/qemu-system-aarch64 -M iPhone6splus-n66-s8000,kernel-filename=kernelcache.release.n66.out,dtb-filename=Firmware/all_flash/DeviceTree.n66ap.im4p.out,driver-filename=aleph_bdev_drv.bin,qc-file-0-filename=hfs.main,qc-file-1-filename=hfs.sec,tc-filename=static_tc,kern-cmd-args="debug=0x8 kextlog=0xfff cpus=1 rd=disk0 serial=2",xnu-ramfb=off -cpu max -m 6G -serial mon:stdio
+Abort trap: 6
+bash-3.2$ brew update && brew upgrade && brew install openssl
+Already up-to-date.
+Updating Homebrew...
+Updating Homebrew...
+Warning: openssl@1.1 1.1.1g is already installed and up-to-date
+To reinstall 1.1.1g, run `brew reinstall openssl@1.1`
+bash-3.2$ cd /usr/local/Cellar/openssl/1.0.2t/lib
+bash: cd: /usr/local/Cellar/openssl/1.0.2t/lib: No such file or directory
+bash-3.2$ sudo cp libssl.1.0.0.dylib libcrypto.1.0.0.dylib /usr/local/lib/
+Password:
+cp: libssl.1.0.0.dylib: No such file or directory
+cp: libcrypto.1.0.0.dylib: No such file or directory
+bash-3.2$ brew reinstall openssl@1.1
+==> Downloading https://homebrew.bintray.com/bottles/openssl%401.1-1.1.1g.catali
+Already downloaded: /Users/jd/Library/Caches/Homebrew/downloads/d6b7a6d80c588c89e79f350ce3e05c95d31d804291cc120efcbb6c9478607a41--openssl@1.1-1.1.1g.catalina.bottle.tar.gz
+==> Reinstalling openssl@1.1 
+==> Pouring openssl@1.1-1.1.1g.catalina.bottle.tar.gz
+==> Caveats
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /usr/local/etc/openssl@1.1/certs
+
+and run
+  /usr/local/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides LibreSSL.
+
+If you need to have openssl@1.1 first in your PATH run:
+  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+For pkg-config to find openssl@1.1 you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+
+==> Summary
+🍺  /usr/local/Cellar/openssl@1.1/1.1.1g: 8,059 files, 18MB
+bash-3.2$ cd /usr/local/Cellar/openssl/1.0.2t/lib
+bash: cd: /usr/local/Cellar/openssl/1.0.2t/lib: No such file or directory
+bash-3.2$ ls /usr/local/Cellar/openssl/
+ls: /usr/local/Cellar/openssl/: No such file or directory
+bash-3.2$ ls /usr/local/Cellar/
+aarch64-none-elf	openssl@1.1		readline
+gdbm			pcre			sqlite
+gettext			pixman			xz
+glib			pkg-config
+libffi			python@3.8
+bash-3.2$ brew install openssl
+Updating Homebrew...
+Warning: openssl@1.1 1.1.1g is already installed and up-to-date
+To reinstall 1.1.1g, run `brew reinstall openssl@1.1`
+bash-3.2$ brew remove
+Usage: brew uninstall, rm, remove [options] formula
+
+Uninstall formula.
+
+    -f, --force                      Delete all installed versions of formula.
+        --ignore-dependencies        Don't fail uninstall, even if formula is
+                                     a dependency of any installed formulae.
+    -d, --debug                      Display any debugging information.
+    -h, --help                       Show this message.
+
+Error: Invalid usage: this command requires a formula argument
+bash-3.2$ brew uninstall openssl@1.1
+Error: Refusing to uninstall /usr/local/Cellar/openssl@1.1/1.1.1g
+because it is required by glib and python@3.8, which are currently installed.
+You can override this and force removal with:
+  brew uninstall --ignore-dependencies openssl@1.1
+bash-3.2$ brew uninstall --ignore-dependencies openssl@1.1
+Uninstalling /usr/local/Cellar/openssl@1.1/1.1.1g... (8,059 files, 18MB)
+
+Warning: The following openssl@1.1 configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/openssl@1.1
+  /usr/local/etc/openssl@1.1/cert.pem
+  /usr/local/etc/openssl@1.1/certs
+  /usr/local/etc/openssl@1.1/ct_log_list.cnf
+  /usr/local/etc/openssl@1.1/ct_log_list.cnf.dist
+  /usr/local/etc/openssl@1.1/misc
+  /usr/local/etc/openssl@1.1/misc/CA.pl
+  /usr/local/etc/openssl@1.1/misc/tsget
+  /usr/local/etc/openssl@1.1/misc/tsget.pl
+  /usr/local/etc/openssl@1.1/openssl.cnf
+  /usr/local/etc/openssl@1.1/openssl.cnf.dist
+  /usr/local/etc/openssl@1.1/private
+bash-3.2$ brew install openssl
+Updating Homebrew...
+==> Downloading https://homebrew.bintray.com/bottles/openssl%401.1-1.1.1g.catali
+Already downloaded: /Users/jd/Library/Caches/Homebrew/downloads/d6b7a6d80c588c89e79f350ce3e05c95d31d804291cc120efcbb6c9478607a41--openssl@1.1-1.1.1g.catalina.bottle.tar.gz
+==> Pouring openssl@1.1-1.1.1g.catalina.bottle.tar.gz
+==> Caveats
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /usr/local/etc/openssl@1.1/certs
+
+and run
+  /usr/local/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides LibreSSL.
+
+If you need to have openssl@1.1 first in your PATH run:
+  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+For pkg-config to find openssl@1.1 you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+
+==> Summary
+🍺  /usr/local/Cellar/openssl@1.1/1.1.1g: 8,059 files, 18MB
+bash-3.2$ ls /usr/local/Cellar/openssl@1.1
+1.1.1g
+bash-3.2$ ls /usr/local/Cellar/openssl@1.1g
+ls: /usr/local/Cellar/openssl@1.1g: No such file or directory
+bash-3.2$ ls /usr/local/Cellar/openssl@1.1/1.1.1g
+AUTHORS			NEWS			lib
+CHANGES			README			share
+INSTALL_RECEIPT.json	bin
+LICENSE			include
+bash-3.2$ ls /usr/local/Cellar/openssl@1.1/1.1.1g/lib
+engines-1.1		libcrypto.dylib		libssl.dylib
+libcrypto.1.1.dylib	libssl.1.1.dylib	pkgconfig
+libcrypto.a		libssl.a
+bash-3.2$ cd /usr/local/Cellar/openssl@1.1/1.1.1g/lib
+bash-3.2$ sudo cp libssl.1.1.dylib libcrypto.1.1.dylib /usr/local/lib/
+bash-3.2$ cd /usr/local/lib
+bash-3.2$ sudo ln -s libssl.1.1.dylib libssl.dylib
+bash-3.2$ sudo ln -s libcrypto.1.1.dylib libcrypto.dylib
+bash-3.2$ cd /Users/jd/Documents/Oxygen/oxygenData/Master 
+bash-3.2$ xnu-qemu-arm64/aarch64-softmmu/qemu-system-aarch64 -M iPhone6splus-n66-s8000,kernel-filename=kernelcache.release.n66.out,dtb-filename=Firmware/all_flash/DeviceTree.n66ap.im4p.out,driver-filename=aleph_bdev_drv.bin,qc-file-0-filename=hfs.main,qc-file-1-filename=hfs.sec,tc-filename=static_tc,kern-cmd-args="debug=0x8 kextlog=0xfff cpus=1 rd=disk0 serial=2",xnu-ramfb=off -cpu max -m 6G -serial mon:stdio
+Abort trap: 6
+bash-3.2$ ls /usr/local/Cellar/openssl@1.1/1.1.1g/lib
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ cd xnu-qemu-arm64
+bash-3.2$ ./configure --target-list=aarch64-softmmu --disable-capstone --disable-pie --disable-slirp
+Install prefix    /usr/local
+BIOS directory    /usr/local/share/qemu
+firmware path     /usr/local/share/qemu-firmware
+binary directory  /usr/local/bin
+library directory /usr/local/lib
+module directory  /usr/local/lib/qemu
+libexec directory /usr/local/libexec
+include directory /usr/local/include
+config directory  /usr/local/etc
+local state directory   /usr/local/var
+Manual directory  /usr/local/share/man
+ELF interp prefix /usr/gnemul/qemu-%M
+Source path       /Users/jd/Documents/Oxygen/oxygenData/Master/xnu-qemu-arm64
+GIT binary        git
+GIT submodules    ui/keycodemapdb tests/fp/berkeley-testfloat-3 tests/fp/berkeley-softfloat-3 dtc
+C compiler        cc
+Host C compiler   cc
+C++ compiler      c++
+Objective-C compiler clang
+ARFLAGS           rv
+CFLAGS            -O2 -g 
+QEMU_CFLAGS       -I/usr/local/Cellar/pixman/0.40.0/include/pixman-1 -I$(SRC_PATH)/dtc/libfdt  -I/usr/local/Cellar/glib/2.64.3/include -I/usr/local/Cellar/glib/2.64.3/include/glib-2.0 -I/usr/local/Cellar/glib/2.64.3/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/pcre/8.44/include -m64 -mcx16 -DOS_OBJECT_USE_OBJC=0 -arch x86_64 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -fwrapv -std=gnu99  -Wno-string-plus-int -Wno-typedef-redefinition -Wno-initializer-overrides -Wexpansion-to-defined -Wendif-labels -Wno-shift-negative-value -Wno-missing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-definition -Wtype-limits -fstack-protector-strong 
+LDFLAGS           -framework Hypervisor -m64 -framework CoreFoundation -framework IOKit -arch x86_64 -g 
+QEMU_LDFLAGS      -L$(BUILD_DIR)/dtc/libfdt 
+make              make
+install           install
+python            python3 -B (3.7.3)
+slirp support     no 
+module support    no
+host CPU          x86_64
+host big endian   no
+target list       aarch64-softmmu
+gprof enabled     no
+sparse enabled    no
+strip binaries    yes
+profiler          no
+static build      no
+Cocoa support     yes
+SDL support       no 
+SDL image support no
+GTK support       no 
+GTK GL support    no
+VTE support       no 
+TLS priority      NORMAL
+GNUTLS support    no
+libgcrypt         no
+nettle            no 
+libtasn1          no
+PAM               yes
+iconv support     yes
+curses support    no
+virgl support     no 
+curl support      yes
+mingw32 support   no
+Audio drivers     coreaudio 
+Block whitelist (rw) 
+Block whitelist (ro) 
+VirtFS support    no
+Multipath support no
+VNC support       yes
+VNC SASL support  yes
+VNC JPEG support  no
+VNC PNG support   no
+xen support       no
+brlapi support    no
+bluez  support    no
+Documentation     no
+PIE               no
+vde support       no
+netmap support    no
+Linux AIO support no
+ATTR/XATTR support no
+Install blobs     yes
+KVM support       no
+HAX support       yes
+HVF support       yes
+WHPX support      no
+TCG support       yes
+TCG debug enabled no
+TCG interpreter   no
+malloc trim support no
+RDMA support      no
+PVRDMA support    no
+fdt support       git
+membarrier        no
+preadv support    no
+fdatasync         no
+madvise           yes
+posix_madvise     yes
+posix_memalign    yes
+libcap-ng support no
+vhost-net support yes
+vhost-crypto support yes
+vhost-scsi support no
+vhost-vsock support no
+vhost-user support yes
+vhost-user-fs support yes
+Trace backends    log
+spice support     no 
+rbd support       no
+xfsctl support    no
+smartcard support no
+libusb            no
+usb net redir     no
+OpenGL support    no
+OpenGL dmabufs    no
+libiscsi support  no
+libnfs support    no
+build guest agent yes
+QGA VSS support   no
+QGA w32 disk info no
+QGA MSI support   no
+seccomp support   no
+coroutine backend sigaltstack
+coroutine pool    yes
+debug stack usage no
+mutex debugging   no
+crypto afalg      no
+GlusterFS support no
+gcov              gcov
+gcov enabled      no
+TPM support       yes
+libssh support    no
+QOM debugging     yes
+Live block migration yes
+lzo support       no
+snappy support    no
+bzip2 support     yes
+lzfse support     no
+NUMA host support no
+libxml2           yes
+tcmalloc support  no
+jemalloc support  no
+avx2 optimization no
+replication support yes
+VxHS block device no
+bochs support     yes
+cloop support     yes
+dmg support       yes
+qcow v1 support   yes
+vdi support       yes
+vvfat support     yes
+qed support       yes
+parallels support yes
+sheepdog support  yes
+capstone          no
+libpmem support   no
+libudev           no
+default devices   yes
+plugin support    no
+cross containers  no
+bash-3.2$ make -j16
+  GEN     aarch64-softmmu/config-devices.mak.tmp
+  GEN     config-host.h
+  GEN     trace/generated-tcg-tracers.h
+  GEN     trace/generated-helpers-wrappers.h
+  GEN     trace/generated-helpers.c
+  GEN     trace/generated-helpers.h
+  GEN     module_block.h
+  GEN     trace-root.h
+  GEN     accel/kvm/trace.h
+  GEN     accel/tcg/trace.h
+  GEN     crypto/trace.h
+  GEN     monitor/trace.h
+  GEN     authz/trace.h
+  GEN     block/trace.h
+  GEN     io/trace.h
+	CHK version_gen.h
+  GEN     nbd/trace.h
+  GEN     scsi/trace.h
+  GEN     chardev/trace.h
+  GEN     audio/trace.h
+  GEN     hw/9pfs/trace.h
+  GEN     hw/acpi/trace.h
+  GEN     hw/alpha/trace.h
+  GEN     hw/arm/trace.h
+  GEN     hw/audio/trace.h
+  GEN     hw/block/trace.h
+  GEN     hw/block/dataplane/trace.h
+  GEN     hw/char/trace.h
+  GEN     hw/dma/trace.h
+  GEN     hw/hppa/trace.h
+  GEN     hw/i2c/trace.h
+  GEN     hw/i386/trace.h
+  GEN     hw/i386/xen/trace.h
+  GEN     hw/ide/trace.h
+  GEN     hw/input/trace.h
+  GEN     hw/intc/trace.h
+  GEN     hw/isa/trace.h
+  GEN     hw/mem/trace.h
+  GEN     hw/mips/trace.h
+  GEN     hw/misc/trace.h
+  GEN     hw/misc/macio/trace.h
+  GEN     hw/net/trace.h
+  GEN     hw/nvram/trace.h
+  GEN     hw/pci/trace.h
+  GEN     hw/pci-host/trace.h
+  GEN     hw/ppc/trace.h
+  GEN     hw/rdma/trace.h
+  GEN     hw/rdma/vmw/trace.h
+  GEN     hw/rtc/trace.h
+  GEN     hw/s390x/trace.h
+  GEN     hw/scsi/trace.h
+  GEN     hw/sd/trace.h
+  GEN     hw/sparc/trace.h
+  GEN     hw/sparc64/trace.h
+  GEN     hw/timer/trace.h
+  GEN     aarch64-softmmu/config-devices.mak
+  GEN     hw/tpm/trace.h
+  GEN     hw/usb/trace.h
+  GEN     hw/vfio/trace.h
+  GEN     hw/virtio/trace.h
+  GEN     hw/watchdog/trace.h
+  GEN     hw/xen/trace.h
+  GEN     hw/gpio/trace.h
+  GEN     hw/riscv/trace.h
+  GEN     migration/trace.h
+  GEN     net/trace.h
+  GEN     ui/trace.h
+  GEN     hw/display/trace.h
+  GEN     qapi/trace.h
+  GEN     qom/trace.h
+  GEN     target/arm/trace.h
+  GEN     target/hppa/trace.h
+  GEN     target/i386/trace.h
+  GEN     target/mips/trace.h
+  GEN     target/ppc/trace.h
+  GEN     target/riscv/trace.h
+  GEN     target/s390x/trace.h
+  GEN     target/sparc/trace.h
+  GEN     util/trace.h
+  GEN     hw/core/trace.h
+  GEN     trace-root.c
+  GEN     accel/kvm/trace.c
+  GEN     accel/tcg/trace.c
+  GEN     crypto/trace.c
+  GEN     monitor/trace.c
+  GEN     authz/trace.c
+  GEN     block/trace.c
+  GEN     io/trace.c
+  GEN     nbd/trace.c
+  GEN     scsi/trace.c
+  GEN     chardev/trace.c
+  GEN     audio/trace.c
+  GEN     hw/9pfs/trace.c
+  GEN     hw/acpi/trace.c
+  GEN     hw/alpha/trace.c
+  GEN     hw/arm/trace.c
+  GEN     hw/audio/trace.c
+  GEN     hw/block/trace.c
+  GEN     hw/block/dataplane/trace.c
+  GEN     hw/char/trace.c
+  GEN     hw/dma/trace.c
+  GEN     hw/hppa/trace.c
+  GEN     hw/i2c/trace.c
+  GEN     hw/i386/trace.c
+  GEN     hw/i386/xen/trace.c
+  GEN     hw/ide/trace.c
+  GEN     hw/input/trace.c
+  GEN     hw/intc/trace.c
+  GEN     hw/isa/trace.c
+  GEN     hw/mem/trace.c
+  GEN     hw/mips/trace.c
+  GEN     hw/misc/trace.c
+  GEN     hw/misc/macio/trace.c
+  GEN     hw/net/trace.c
+  GEN     hw/nvram/trace.c
+  GEN     hw/pci/trace.c
+  GEN     hw/pci-host/trace.c
+  GEN     hw/ppc/trace.c
+  GEN     hw/rdma/trace.c
+  GEN     hw/rdma/vmw/trace.c
+  GEN     hw/rtc/trace.c
+  GEN     hw/s390x/trace.c
+  GEN     hw/scsi/trace.c
+  GEN     hw/sd/trace.c
+  GEN     hw/sparc/trace.c
+  GEN     hw/sparc64/trace.c
+  GEN     hw/timer/trace.c
+  GEN     hw/tpm/trace.c
+  GEN     hw/usb/trace.c
+  GEN     hw/vfio/trace.c
+  GEN     hw/virtio/trace.c
+  GEN     hw/watchdog/trace.c
+  GEN     hw/xen/trace.c
+  GEN     hw/gpio/trace.c
+  GEN     hw/riscv/trace.c
+  GEN     migration/trace.c
+  GEN     net/trace.c
+  GEN     ui/trace.c
+  GEN     hw/display/trace.c
+  GEN     qapi/trace.c
+  GEN     qom/trace.c
+  GEN     target/arm/trace.c
+  GEN     target/hppa/trace.c
+  GEN     target/i386/trace.c
+  GEN     target/mips/trace.c
+  GEN     target/ppc/trace.c
+  GEN     target/riscv/trace.c
+  GEN     target/s390x/trace.c
+  GEN     target/sparc/trace.c
+  GEN     util/trace.c
+  GEN     hw/core/trace.c
+  GEN     config-all-devices.mak
+	CHK version_gen.h
+  CC      block.o
+no symbols
+  LINK    qemu-nbd
+no symbols
+  LINK    qemu-img
+no symbols
+  LINK    qemu-io
+  GEN     aarch64-softmmu/config-devices.h
+  GEN     aarch64-softmmu/config-target.h
+  GEN     trace/generated-helpers.c
+no symbols
+  LINK    aarch64-softmmu/qemu-system-aarch64
+  REZ     aarch64-softmmu/qemu-system-aarch64
+  SETFILE aarch64-softmmu/qemu-system-aarch64
+bash-3.2$ cd -
+/Users/jd/Documents/Oxygen/oxygenData/Master
+bash-3.2$ nu-qemu-arm64/aarch64-softmmu/qemu-system-aarch64 -M iPhone6splus-n66-s8000,kernel-filename=kernelcache.release.n66.out,dtb-filename=Firmware/all_flash/DeviceTree.n66ap.im4p.out,driver-filename=aleph_bdev_drv.bin,qc-file-0-filename=hfs.main,qc-file-1-filename=hfs.sec,tc-filename=static_tc,kern-cmd-args="debug=0x8 kextlog=0xfff cpus=1 rd=disk0 serial=2",xnu-ramfb=off -cpu max -m 6G -serial mon:stdio
+bash: nu-qemu-arm64/aarch64-softmmu/qemu-system-aarch64: No such file or directory
+bash-3.2$ qemu-arm64/aarch64-softmmu/qemu-system-aarch64 -M iPhone6splus-n66-s8000,kernel-filename=kernelcache.release.n66.out,dtb-filename=Firmware/all_flash/DeviceTree.n66ap.im4p.out,driver-filename=aleph_bdev_drv.bin,qc-file-0-filename=hfs.main,qc-file-1-filename=hfs.sec,tc-filename=static_tc,kern-cmd-args="debug=0x8 kextlog=0xfff cpus=1 rd=disk0 serial=2",xnu-ramfb=off -cpu max -m 6G -serial mon:stdio
+bash: qemu-arm64/aarch64-softmmu/qemu-system-aarch64: No such file or directory
+bash-3.2$ ls
+048-31952-103.dmg			kernelcache.release.iphone7
+048-32459-105.dmg			kernelcache.release.n66
+048-32651-104.dmg			kernelcache.release.n66.asn1decoded
+048-32651-104.dmg.out			kernelcache.release.n66.out
+BuildManifest.plist			launchd
+Firmware				odtre
+Restore.plist				rootfs.zip
+aleph_bdev_drv.bin			rootlessJB
+darwin-xnu				static_tc
+dtree					symbols.nm
+ent.xml					tchashes
+hfs.main				xnu-qemu-arm64
+hfs.sec					xnu-qemu-arm64-tools
+jtool
+bash-3.2$ xnu-qemu-arm64/aarch64-softmmu/qemu-system-aarch64 -M iPhone6splus-n66-s8000,kernel-filename=kernelcache.release.n66.out,dtb-filename=Firmware/all_flash/DeviceTree.n66ap.im4p.out,driver-filename=aleph_bdev_drv.bin,qc-file-0-filename=hfs.main,qc-file-1-filename=hfs.sec,tc-filename=static_tc,kern-cmd-args="debug=0x8 kextlog=0xfff cpus=1 rd=disk0 serial=2",xnu-ramfb=off -cpu max -m 6G -serial mon:stdio
+Abort trap: 6
+bash-3.2$ 
