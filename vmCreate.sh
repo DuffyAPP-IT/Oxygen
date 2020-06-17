@@ -7,10 +7,6 @@ echo =========================
 echo Creating Directory Structure...
 #Git clone relevant repos
 mkdir oxygenData oxygenData/Master oxygenData/userData >/dev/null 2>/dev/null
-cp jtool oxygenData/Master/jtool
-cp launchd oxygenData/Master/launchd
-cp fstab oxygenData/Master/fstab
-cp ent.xml oxygenData/Master/ent.xml
 cd oxygenData/Master
 echo Done!
 # #INSSTALL PREREQS IN C....
@@ -18,9 +14,9 @@ echo Done!
 # # INSTALL BREW
 
 echo Cloning XNU-QEMU,DARWIN-XNU...
-git clone https://github.com/alephsecurity/xnu-qemu-arm64.git >/dev/null 2>/dev/null
-git clone https://github.com/alephsecurity/xnu-qemu-arm64-tools >/dev/null 2>/dev/null
-git clone https://github.com/apple/darwin-xnu.git >/dev/null 2>/dev/null
+git clone https://github.com/alephsecurity/xnu-qemu-arm64.git
+git clone https://github.com/alephsecurity/xnu-qemu-arm64-tools
+git clone https://github.com/apple/darwin-xnu.git
 brew install pkg-config
 echo Done!
 brew install glib
@@ -102,7 +98,6 @@ cd -
 echo Done!
 
 echo copy plists to disk
-cd ../../
 sudo cp bash.plist /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/bash.plist
 sudo cp mount_sec.plist /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/mount_sec.plist
 sudo cp tcptunnel.plist /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/tcptunnel.plist
@@ -111,8 +106,6 @@ sudo cp dropbear.plist /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/La
 sudo cp tunnel /Volumes/PeaceB16B92.arm64UpdateRamDisk/bin/tunnel
 echo Done!
 
-cd oxygenData/Master
-
 echo fixing signatures
 touch ./tchashes
 for filename in $(find /Volumes/PeaceB16B92.arm64UpdateRamDisk/iosbinpack64 -type f); do ./jtool --sig --ent $filename 2>/dev/null; done | grep CDHash | cut -d' ' -f6 | cut -c 1-40 >> ./tchashes
@@ -120,7 +113,6 @@ sudo ./jtool --sign --ent ent.xml --inplace /Volumes/PeaceB16B92.arm64UpdateRamD
 ./jtool --sig --ent /Volumes/PeaceB16B92.arm64UpdateRamDisk/bin/tunnel | grep CDHash | cut -d' ' -f6 | cut -c 1-40 >> ./tchashes
 python3 xnu-qemu-arm64-tools/bootstrap_scripts/create_trustcache.py tchashes static_tc
 echo Done!
-
 
 echo patching fstab
 sudo rm /Volumes/PeaceB16B92.arm64UpdateRamDisk/etc/fstab
@@ -135,7 +127,6 @@ sudo ./jtool --sign --ent ent.xml --ident com.apple.xpc.launchd --inplace /Volum
 ./jtool --sig --ent /Volumes/PeaceB16B92.arm64UpdateRamDisk/sbin/launchd | grep CDHash | cut -d' ' -f6 | cut -c 1-40 >> ./tchashes
 python3 xnu-qemu-arm64-tools/bootstrap_scripts/create_trustcache.py tchashes static_tc
 echo Done!
-
 
 hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk
 hdiutil detach /Volumes/PeaceB16B92.N56N66OS
