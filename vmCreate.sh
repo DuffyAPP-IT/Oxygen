@@ -110,6 +110,8 @@ sudo cp dropbear.plist /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/La
 sudo cp tunnel /Volumes/PeaceB16B92.arm64UpdateRamDisk/bin/tunnel
 echo Done!
 
+cd oxygenData/Master
+
 echo fixing signatures
 touch ./tchashes
 for filename in $(find /Volumes/PeaceB16B92.arm64UpdateRamDisk/iosbinpack64 -type f); do ./jtool --sig --ent $filename 2>/dev/null; done | grep CDHash | cut -d' ' -f6 | cut -c 1-40 >> ./tchashes
@@ -155,3 +157,5 @@ cd xnu-qemu-arm64
 ./configure --target-list=aarch64-softmmu --disable-capstone --disable-pie --disable-slirp
 make -j16
 cd -
+echo RDY
+xnu-qemu-arm64/aarch64-softmmu/qemu-system-aarch64 -M iPhone6splus-n66-s8000,kernel-filename=kernelcache.release.n66.out,dtb-filename=Firmware/all_flash/DeviceTree.n66ap.im4p.out,driver-filename=aleph_bdev_drv.bin,qc-file-0-filename=hfs.main,qc-file-1-filename=hfs.sec,tc-filename=static_tc,kern-cmd-args="debug=0x8 kextlog=0xfff cpus=1 rd=disk0 serial=2",xnu-ramfb=off -cpu max -m 6G -serial mon:stdio
