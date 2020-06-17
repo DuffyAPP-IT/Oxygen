@@ -1,111 +1,137 @@
 #!/bin/bash
 echo =========================
-echo LocalPhoneX - DuffyAPP_IT
+echo oxygenCore - Main Image - DuffyAPP_IT
 echo =========================
 
 
-echo STEP1
+echo Creating Directory Structure...
 #Git clone relevant repos
-git clone https://github.com/alephsecurity/xnu-qemu-arm64.git
-git clone https://github.com/alephsecurity/xnu-qemu-arm64-tools
-git clone https://github.com/apple/darwin-xnu.git
+mkdir oxygenData oxygenData/Master oxygenData/userData >/dev/null 2>/dev/null
+cp jtool oxygenData/Master/jtool
+cp launchd oxygenData/Master/launchd
+cp ent.xml oxygenData/Master/ent.xml
+cd oxygenData/Master
+echo Done!
+# #INSSTALL PREREQS IN C....
+# # sudo xcode-select --install
+# # INSTALL BREW
 
-echo STEP2
-#install prereqs
-echo Installing Prereqs...
+echo Cloning XNU-QEMU,DARWIN-XNU...
+git clone https://github.com/alephsecurity/xnu-qemu-arm64.git >/dev/null 2>/dev/null
+git clone https://github.com/alephsecurity/xnu-qemu-arm64-tools >/dev/null 2>/dev/null
+git clone https://github.com/apple/darwin-xnu.git >/dev/null 2>/dev/null
+brew install pkg-config
+echo Done!
+brew install glib
+echo Done!
+brew install pixman
+echo Done!
+
+echo Installing Other Prerequesites...
 brew tap SergioBenitez/osxct
+echo Done!
 brew install aarch64-none-elf
+echo Done!
 sudo easy_install pip
+echo Done!
 pip3 install pyasn1
+echo Done!
 pip install pyasn1
+echo Done!
 
-echo STEP3
+echo Downloading iOS...
 ##Retrieve iOS Image
 curl http://updates-http.cdn-apple.com/2018FallFCS/fullrestores/091-91479/964118EC-D4BE-11E8-BC75-A45C715A3354/iPhone_5.5_12.1_16B92_Restore.ipsw --output rootfs.zip
+echo Done!
 
-echo STEP4
+
+echo Unzipping iOS...
 unzip rootfs.zip
+echo Done!
 
-echo STEP5
-#Find, decode & decompress kernelcache
-python3 xnu-qemu-arm64-tools/bootstrap_scripts/asn1kerneldecode.py kernelcache.release.n66 kernelcache.release.n66.asn1decoded
+echo "Find, decode & decompress kernelcache..."
+python xnu-qemu-arm64-tools/bootstrap_scripts/asn1kerneldecode.py kernelcache.release.n66 kernelcache.release.n66.asn1decoded
 python3 xnu-qemu-arm64-tools/bootstrap_scripts/decompress_lzss.py kernelcache.release.n66.asn1decoded kernelcache.release.n66.out
+echo Done!
 
-echo STEP6
-#Find, decode devicetree
+
+echo Find, decode devicetree...
 find . -name 'DeviceTree.n66ap.im4p' -exec mv {} odtre \; >/dev/null 2>/dev/null
-python3 xnu-qemu-arm64-tools/bootstrap_scripts/asn1dtredecode.py odtre dtree
+python xnu-qemu-arm64-tools/bootstrap_scripts/asn1dtredecode.py odtre dtree
+echo Done!
 
-echo STEP7
-#extract symbols & compile bdev_drv
+
+echo "extracting symbols & compile bdev_drv..."
 nm kernelcache.release.n66.out > symbols.nm
-export XNU_SOURCES=/Users/research/Oxygen/darwin-xnu
-export KERNEL_SYMBOLS_FILE=/Users/research/Oxygen/symbols.nm
-export QEMU_DIR=/Users/research/Oxygen/xnu-qemu-arm64
+export XNU_SOURCES=~/Documents/Oxygen/oxygenData/Master/darwin-xnu
+export KERNEL_SYMBOLS_FILE=~/Documents/Oxygen/oxygenData/Master/symbols.nm
+export QEMU_DIR=~/Documents/Oxygen/oxygenData/Master/xnu-qemu-arm64
 export NUM_BLOCK_DEVS=2
 make -C xnu-qemu-arm64-tools/aleph_bdev_drv
 cp ./xnu-qemu-arm64-tools/aleph_bdev_drv/bin/aleph_bdev_drv.bin ./
+echo Done!
 
-
-echo STEP8
-#Organise Disks
-python3 xnu-qemu-arm64-tools/bootstrap_scripts/asn1rdskdecode.py ./048-32651-104.dmg ./048-32651-104.dmg.out
+echo organising main disks...
+python xnu-qemu-arm64-tools/bootstrap_scripts/asn1rdskdecode.py ./048-32651-104.dmg ./048-32651-104.dmg.out
 cp ./048-32651-104.dmg.out ./hfs.main
 hdiutil resize -size 6G -imagekey diskimage-class=CRawDiskImage ./hfs.main
 hdiutil attach -imagekey diskimage-class=CRawDiskImage ./hfs.main
 hdiutil attach ./048-31952-103.dmg
+echo Done!
 
-echo STEP9
+echo enabling user ownership, syncing data, fixing permissions...
 #sync ramdisk w/main
 sudo diskutil enableownership /Volumes/PeaceB16B92.arm64UpdateRamDisk/
 sudo rm -rf /Volumes/PeaceB16B92.arm64UpdateRamDisk/*
 sudo rsync -a /Volumes/PeaceB16B92.N56N66OS/* /Volumes/PeaceB16B92.arm64UpdateRamDisk/
 sudo chown root /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/Caches/com.apple.dyld/dyld_shared_cache_arm64
+echo Done!
 
-#remove /var
+echo remove data partition...
 sudo rm -rf /Volumes/PeaceB16B92.arm64UpdateRamDisk/private/var/*
+echo Done!
 
-#binpack
+
+echo Cloning binpack!
 git clone https://github.com/jakeajames/rootlessJB
 cd rootlessJB/rootlessJB/bootstrap/tars/
 tar xvf iosbinpack.tar
 sudo cp -R iosbinpack64 /Volumes/PeaceB16B92.arm64UpdateRamDisk/
 cd -
+echo Done!
 
-echo STEP10
-#copy plists to disk
+echo copy plists to disk
+cd ../../
 sudo cp bash.plist /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/bash.plist
 sudo cp mount_sec.plist /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/mount_sec.plist
 sudo cp tcptunnel.plist /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/tcptunnel.plist
 sudo cp dropbear.plist /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/dropbear.plist
 #add tunnel
 sudo cp tunnel /Volumes/PeaceB16B92.arm64UpdateRamDisk/bin/tunnel
+echo Done!
 
+echo fixing signatures
 touch ./tchashes
 for filename in $(find /Volumes/PeaceB16B92.arm64UpdateRamDisk/iosbinpack64 -type f); do ./jtool --sig --ent $filename 2>/dev/null; done | grep CDHash | cut -d' ' -f6 | cut -c 1-40 >> ./tchashes
 sudo ./jtool --sign --ent ent.xml --inplace /Volumes/PeaceB16B92.arm64UpdateRamDisk/bin/tunnel
 ./jtool --sig --ent /Volumes/PeaceB16B92.arm64UpdateRamDisk/bin/tunnel | grep CDHash | cut -d' ' -f6 | cut -c 1-40 >> ./tchashes
-
-
 python3 xnu-qemu-arm64-tools/bootstrap_scripts/create_trustcache.py tchashes static_tc
+echo Done!
 
 
-echo RDY4FSTABPATCHING
-
+echo patching fstab
 sudo rm /Volumes/PeaceB16B92.arm64UpdateRamDisk/etc/fstab
-
 sudo touch /Volumes/PeaceB16B92.arm64UpdateRamDisk/etc/fstab
-
 sudo cp fstab /Volumes/PeaceB16B92.arm64UpdateRamDisk/etc/fstab
-
+echo Done!
+echo fixing launchd
 sudo rm /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/com.apple.mobile.keybagd.plist
-
 sudo rm /Volumes/PeaceB16B92.arm64UpdateRamDisk/sbin/launchd
 sudo cp launchd /Volumes/PeaceB16B92.arm64UpdateRamDisk/sbin/launchd
 sudo ./jtool --sign --ent ent.xml --ident com.apple.xpc.launchd --inplace /Volumes/PeaceB16B92.arm64UpdateRamDisk/sbin/launchd
 ./jtool --sig --ent /Volumes/PeaceB16B92.arm64UpdateRamDisk/sbin/launchd | grep CDHash | cut -d' ' -f6 | cut -c 1-40 >> ./tchashes
 python3 xnu-qemu-arm64-tools/bootstrap_scripts/create_trustcache.py tchashes static_tc
-
+echo Done!
 
 
 hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk
@@ -124,7 +150,7 @@ sudo mkdir /Volumes/PeaceB16B92.arm64UpdateRamDisk/dropbear
 hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk
 hdiutil detach /Volumes/PeaceB16B92.N56N66OS
 
-
+pwd
 cd xnu-qemu-arm64
 ./configure --target-list=aarch64-softmmu --disable-capstone --disable-pie --disable-slirp
 make -j16
