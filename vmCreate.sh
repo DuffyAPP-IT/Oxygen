@@ -150,4 +150,13 @@ cd xnu-qemu-arm64
 make -j16
 cd -
 echo RDY
-xnu-qemu-arm64/aarch64-softmmu/qemu-system-aarch64 -M iPhone6splus-n66-s8000,kernel-filename=kernelcache.release.n66.out,dtb-filename=dtree,driver-filename=aleph_bdev_drv.bin,qc-file-0-filename=hfs.main,qc-file-1-filename=hfs.sec,tc-filename=static_tc,kern-cmd-args="debug=0x8 kextlog=0xfff cpus=1 rd=disk0 serial=2",xnu-ramfb=on -cpu max -m 6G -serial mon:stdio
+
+hdiutil attach -imagekey diskimage-class=CRawDiskImage ./hfs.sec
+hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk
+hdiutil attach -imagekey diskimage-class=CRawDiskImage ./hfs.main
+hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk
+
+hdiutil attach -imagekey diskimage-class=CRawDiskImage ./hfs.sec
+hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk
+hdiutil attach -imagekey diskimage-class=CRawDiskImage ./hfs.main
+hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk
