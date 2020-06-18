@@ -71,4 +71,8 @@ void startVM(char *owner, char *vmid){
     sprintf(vmStart,"cd Users/%s/%s/ && xnu-qemu-arm64/aarch64-softmmu/qemu-system-aarch64 -M iPhone6splus-n66-s8000,kernel-filename=kernelcache.release.n66.out,dtb-filename=dtree,driver-filename=aleph_bdev_drv.bin,qc-file-0-filename=hfs.main,qc-file-1-filename=hfs.sec,tc-filename=static_tc,kern-cmd-args=\"debug=0x8 kextlog=0xfff cpus=1 rd=disk0 serial=2\",xnu-ramfb=on -cpu max -m 6G -serial mon:stdio",owner,vmid);
     printf("%s",vmStart);
     system(vmStart);
+    char attachsec2[BUFF];
+    sprintf(attachsec2,"cd Users/%s/%s/ && hdiutil attach -imagekey diskimage-class=CRawDiskImage hfs.sec",owner,vmid);
+    system(attachsec2);
+    system("hdiutil detach /Volumes/PeaceB16B92.arm64UpdateRamDisk");
 }
