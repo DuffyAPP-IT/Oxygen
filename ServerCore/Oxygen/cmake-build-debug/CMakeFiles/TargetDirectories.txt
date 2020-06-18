@@ -1,3 +1,3 @@
-/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir

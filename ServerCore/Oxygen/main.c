@@ -1,4 +1,5 @@
 #define VERSION 0
+#define MVERSION 2
 #include <stdio.h>
 #include <stdlib.h>
 #include "string.h"
@@ -7,7 +8,7 @@
 
 int main(int argc, char *argv[]) {
     printf("//////////////////////\n");
-    printf("Project Oxygen V%d\n",VERSION);
+    printf("Project Oxygen V%d.%d\n",VERSION,MVERSION);
     printf("//////////////////////\n");
     if(argv[1]==0){
         printf("Invalid Request To Oxygen...\n");
@@ -17,9 +18,11 @@ int main(int argc, char *argv[]) {
         return 0;
     }else if(strcmp(argv[1],"-i")==0) {
         printf("Initialising Oxygen Server...\n");
-        system("mkdir ServerData ServerData/Master ServerData/Users");
-        system("cp vmCreate.sh ServerData/Master");
-        system("cd ServerData/Master && ./vmCreate.sh");
+        system("mkdir oxygenData oxygenData/Users");
+        system("cp Oxygen oxygenData/Oxygen");
+        system("cp Master.zip oxygenData/Master.zip");
+        system("cd oxygenData && unzip Master.zip");
+        system("./serverInit.sh");
         return 0;
     }else if(strcmp(argv[1],"-c")==0){
         printf("Oxygen -> Create...\n");
@@ -41,7 +44,7 @@ int main(int argc, char *argv[]) {
     }
     else if(strcmp(argv[1],"-s")==0){
         //verify owner and vmid are present...
-        printf("Starting VMID -> %s\n",argv[2]);
+        printf("Starting via OWNERID -> %s -> VMID -> %s\n",argv[2], argv[3]);
         startVM(argv[2],argv[3]);
         return 0;
     }

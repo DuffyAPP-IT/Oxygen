@@ -8,92 +8,92 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug"/>
+				<Option working_dir="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug"/>
+				<Option working_dir="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug"/>
+				<Option working_dir="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Oxygen">
-				<Option output="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Oxygen" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug"/>
+				<Option output="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Oxygen" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 Oxygen"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 Oxygen"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Oxygen/fast">
-				<Option output="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Oxygen" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug"/>
+				<Option output="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Oxygen" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 Oxygen/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 Oxygen/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/iLibX.c">
+		<Unit filename="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c">
 			<Option target="Oxygen"/>
 		</Unit>
-		<Unit filename="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/iLibX.h">
+		<Unit filename="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h">
 			<Option target="Oxygen"/>
 		</Unit>
-		<Unit filename="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/main.c">
+		<Unit filename="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c">
 			<Option target="Oxygen"/>
 		</Unit>
-		<Unit filename="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/vmManage.c">
+		<Unit filename="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c">
 			<Option target="Oxygen"/>
 		</Unit>
-		<Unit filename="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/vmManage.h">
+		<Unit filename="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h">
 			<Option target="Oxygen"/>
 		</Unit>
-		<Unit filename="/Users/jamesduffy/Documents/GithubSync/iHub/ServerCore/Oxygen/CMakeLists.txt">
+		<Unit filename="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
