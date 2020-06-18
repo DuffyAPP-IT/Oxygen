@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Oxygen.dir/iLibX.c.o"
   "CMakeFiles/Oxygen.dir/main.c.o"
+  "CMakeFiles/Oxygen.dir/serverInit.c.o"
   "CMakeFiles/Oxygen.dir/vmManage.c.o"
   "Oxygen"
   "Oxygen.pdb"

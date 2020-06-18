@@ -177,6 +177,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/main.c.s
 .PHONY : main.c.s
 
+serverInit.o: serverInit.c.o
+
+.PHONY : serverInit.o
+
+# target to build an object file
+serverInit.c.o:
+	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/serverInit.c.o
+.PHONY : serverInit.c.o
+
+serverInit.i: serverInit.c.i
+
+.PHONY : serverInit.i
+
+# target to preprocess a source file
+serverInit.c.i:
+	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/serverInit.c.i
+.PHONY : serverInit.c.i
+
+serverInit.s: serverInit.c.s
+
+.PHONY : serverInit.s
+
+# target to generate assembly for a file
+serverInit.c.s:
+	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/serverInit.c.s
+.PHONY : serverInit.c.s
+
 vmManage.o: vmManage.c.o
 
 .PHONY : vmManage.o
@@ -219,6 +246,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... serverInit.o"
+	@echo "... serverInit.i"
+	@echo "... serverInit.s"
 	@echo "... vmManage.o"
 	@echo "... vmManage.i"
 	@echo "... vmManage.s"

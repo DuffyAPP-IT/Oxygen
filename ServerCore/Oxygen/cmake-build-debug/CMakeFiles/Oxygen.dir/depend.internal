@@ -7,6 +7,10 @@ CMakeFiles/Oxygen.dir/iLibX.c.o
 CMakeFiles/Oxygen.dir/main.c.o
  /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c
  /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
+CMakeFiles/Oxygen.dir/serverInit.c.o
+ /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
+ /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/serverInit.c
+ /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
 CMakeFiles/Oxygen.dir/vmManage.c.o
  /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
  /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c

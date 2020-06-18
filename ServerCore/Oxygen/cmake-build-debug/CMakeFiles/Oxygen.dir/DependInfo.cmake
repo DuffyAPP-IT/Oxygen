@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c" "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/iLibX.c.o"
   "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c" "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/main.c.o"
+  "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/serverInit.c" "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/serverInit.c.o"
   "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c" "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/vmManage.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

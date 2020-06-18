@@ -87,6 +87,9 @@
 		<Unit filename="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c">
 			<Option target="Oxygen"/>
 		</Unit>
+		<Unit filename="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/serverInit.c">
+			<Option target="Oxygen"/>
+		</Unit>
 		<Unit filename="/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c">
 			<Option target="Oxygen"/>
 		</Unit>
