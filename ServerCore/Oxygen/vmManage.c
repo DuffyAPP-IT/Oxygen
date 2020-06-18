@@ -46,7 +46,7 @@ int generateSubVM(char *owner,char *vmid, char *hasauto, char *cbpack, char *mdi
             sprintf(attach,"cd Users/%s/%s/ && hdiutil attach -imagekey diskimage-class=CRawDiskImage hfs.main",owner,vmid);
             system(attach);
             char repval[4000];
-            sprintf(repval,"sudo sed -i '' 's/2244/%s/g' /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/tcptunnel.plist",vmid);
+            sprintf(repval,"sudo sed -i '' 's/2222/%s/g' /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/tcptunnel.plist",vmid);
             printf("REPVAL IS -> %s",repval);
             system("cp /Volumes/PeaceB16B92.arm64UpdateRamDisk/System/Library/LaunchDaemons/tcptunnel.plist ~/t.plist");
             system(repval);
