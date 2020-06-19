@@ -27,7 +27,7 @@ int clonerepo(char *pre,char *repoaddr){
     }
 }
 
-int init(char *iosurl,char *devicetype,char *codename){
+int init(char *iosurl,char *devicetype,char *codename, char *rootfs, char *updatedmg){
     printf("Preparing Oxygen Directory Structure\n");
     if(prepdirs()==0){
         printf("Success!\n");
@@ -71,7 +71,13 @@ int init(char *iosurl,char *devicetype,char *codename){
                                             sprintf(ESYM,"chmod +x oxygenData/Master/symbols.sh && cd oxygenData/Master && ./symbols.sh");
                                             if(macos_run_ge(ESYM)==0){
                                                 printf("Success!\n");
+                                                char decUpdate[4200];
+                                                sprintf(decUpdate,"cd oxygenData/Master && python xnu-qemu-arm64-tools/bootstrap_scripts/asn1rdskdecode.py ./%s ./%s.out && cp ./%s.out ./hfs.main",updatedmg,updatedmg,updatedmg);
+                                                printf("Decoding UPDATE Ramdisk...\n");
+                                                if(macos_run_ge(decUpdate)==0){
+                                                    printf("Success!\n");
 
+                                                }
 
                                             } else{
                                                 printf("Failed Extracting Symbols\n");

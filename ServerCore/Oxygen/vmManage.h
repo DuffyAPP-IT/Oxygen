@@ -9,6 +9,6 @@
 int heartBeat(char *port);
 int generateSubVM(char *owner,char *vmid, char *hasauto, char *cbpack, char *mdir);
 void startVM(char *owner, char *vmid);
-int init(char *iosurl,char *devicetype,char *codename);
+int init(char *iosurl,char *devicetype,char *codename, char *rootfs, char *updatedmg);
 int clonerepo(char *pre,char *repoaddr);
 int prepdirs();
