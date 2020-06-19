@@ -20,11 +20,15 @@ int main(int argc, char *argv[]) {
         printf("Initialising Oxygen Server...\n");
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         system("mkdir oxygenData oxygenData/Users");
         system("cp Oxygen oxygenData/Oxygen");
         system("cp Master.zip oxygenData/Master.zip");
         system("cd oxygenData && unzip Master.zip");
         system("./serverInit.sh");
+=======
+        init("https://updates.cdn-apple.com/2019FallFCS/fullrestores/041-81340/FC3F00A8-F4E5-11E9-A8C8-B6C134390AC5/iPhone_5.5_13.2_17B84_Restore.ipsw","N66","YukonB17B84","048-90358-101.dmg","048-90336-105.dmg");
+>>>>>>> Stashed changes
 =======
         init("https://updates.cdn-apple.com/2019FallFCS/fullrestores/041-81340/FC3F00A8-F4E5-11E9-A8C8-B6C134390AC5/iPhone_5.5_13.2_17B84_Restore.ipsw","N66","YukonB17B84","048-90358-101.dmg","048-90336-105.dmg");
 >>>>>>> Stashed changes
