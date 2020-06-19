@@ -64,7 +64,7 @@ int init(char *iosurl,char *devicetype,char *codename, char *rootfs, char *updat
                                         printf("Success!\n");
                                         printf("Decoding Device Tree...\n");
                                         if(macos_run_ge("cd oxygenData/Master && python xnu-qemu-arm64-tools/bootstrap_scripts/asn1dtredecode.py odtre dtree")==0){
-                                            printf("Success!");
+                                            printf("Success!\n");
                                             printf("Extracting Symbols...\n");
                                             char ESYM[2400];
                                             //fix generating symbols..
@@ -79,9 +79,9 @@ int init(char *iosurl,char *devicetype,char *codename, char *rootfs, char *updat
                                                     char resmain[2400];
                                                     sprintf(resmain,"chmod +x oxygenData/Master/resizeattachmain.sh && cd oxygenData/Master && ./resizeattachmain.sh");
                                                     if(macos_run_ge(resmain)==0){
-                                                        printf("Resize & Attach Success!");
+                                                        printf("Resize & Attach Success!\n");
                                                         char atroot[2400];
-                                                        sprintf(atroot,"hdiutil attach ./%s",rootfs);
+                                                        sprintf(atroot,"cd oxygenData/Master && hdiutil attach ./%s",rootfs);
                                                         if(macos_run_ge(atroot)==0){
                                                             printf("Mounted Root\n");
                                                         } else{
