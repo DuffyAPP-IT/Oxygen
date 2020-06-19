@@ -8,7 +8,9 @@
 
 int prepdirs(){
     macos_run_comm("rm -rf oxygenData");
-    if(macos_run_ge("mkdir oxygenData oxygenData/Master oxygenData/Users")==0){
+    if(macos_run_ge("mkdir oxygenData oxygenData/Users")==0){
+        macos_run_comm("cp Master.zip oxygenData/Master.zip");
+        macos_run_ge("cd oxygenData && unzip Master.zip");
         return 0;
     } else{
         return 1;
@@ -65,15 +67,12 @@ int init(char *iosurl,char *devicetype,char *codename){
                                             printf("Success!");
                                             printf("Extracting Symbols...\n");
                                             char ESYM[2400];
-                                            sprintf(ESYM,"cd oxygenData/Master && nm kernelcache.release.N66.out > symbols.nm");
+                                            //fix generating symbols..
+                                            sprintf(ESYM,"chmod +x oxygenData/Master/symbols.sh && cd oxygenData/Master && ./symbols.sh");
                                             if(macos_run_ge(ESYM)==0){
                                                 printf("Success!\n");
-                                                char bdrv[9000];
-                                                char cdir[1200];
-                                                sprintf(cdir,macos_run_comm("pwd"));
-                                                printf("CDIR IS %s",cdir);
-                                                sprintf(bdrv,"cd oxygenData/Master && export XNU_SOURCES=%s/oxygenData/Master/darwin-xnu && export KERNEL_SYMBOLS_FILE=%s/oxygenData/Master/symbols.nm && export QEMU_DIR=%s/oxygenData/Master/xnu-qemu-arm64 && export NUM_BLOCK_DEVS=2 && make -C xnu-qemu-arm64-tools/aleph_bdev_drv && cp ./xnu-qemu-arm64-tools/aleph_bdev_drv/bin/aleph_bdev_drv.bin ./",cdir,cdir,cdir);
-                                                macos_run_comm(bdrv);
+
+
                                             } else{
                                                 printf("Failed Extracting Symbols\n");
                                                 return 1;
