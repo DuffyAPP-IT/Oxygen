@@ -6,7 +6,29 @@
 
 #IncludeRegexTransform: 
 
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c
+iLibX.h
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
+stdio.h
+-
+sys/wait.h
+-
+stdlib.h
+-
+string.h
+-
+
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
+
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/string.h
+vmManage.h
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
 
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/serverInit.c
 stdio.h
@@ -15,6 +37,18 @@ iLibX.h
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
 vmManage.h
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
+
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c
+vmManage.h
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
+stdio.h
+-
+sys/wait.h
+-
+iLibX.h
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
+stdlib.h
+-
 
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
 

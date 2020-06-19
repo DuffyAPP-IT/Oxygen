@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 //        system("cp Master.zip oxygenData/Master.zip");
 //        system("cd oxygenData && unzip Master.zip");
 //        system("./serverInit.sh");
-        init("https://updates.cdn-apple.com/2018FallFCS/fullrestores/091-63220/11676EA8-AC8E-11E8-B3C7-D85EDF907439/iPhone_5.5_12.0_16A366_Restore.ipsw","n66","Peace16A366","048-08888-230.dmg","048-08497-242.dmg");
+        init("https://updates.cdn-apple.com/2018FallFCS/fullrestores/091-63220/11676EA8-AC8E-11E8-B3C7-D85EDF907439/iPhone_5.5_12.0_16A366_Restore.ipsw","n66","Peace16A366","048-08888-230.dmg","048-08422-242.dmg");
         return 0;
     }else if(strcmp(argv[1],"-c")==0){
         printf("Oxygen -> Create...\n");
