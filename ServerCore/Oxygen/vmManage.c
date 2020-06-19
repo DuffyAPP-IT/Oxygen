@@ -114,9 +114,10 @@ int generateSubVM(char *owner,char *vmid, char *hasauto, char *cbpack, char *mdi
     if(macos_run_ge(ownercreate)==0){
         printf("Directory Structure Create Success\n");
         //Copy Master Files
-        char copyMaster[BUFF];
-        sprintf(copyMaster,"cp -R Master/* Users/%s/%s/",owner,vmid);
-        if(macos_run_ge(copyMaster)==0){
+        char copyxnu[9000];
+        sprintf(copyxnu,"cp -R Master/xnu-qemu-arm64/ Users/%s/%s/xnu-qemu-arm64 && cp Master/kernelcache.release.n66.out Users/%s/%s/kernelcache.release.n66.out && cp Master/dtree Users/%s/%s/dtree && cp Master/aleph_bdev_drv.bin Users/%s/%s/aleph_bdev_drv.bin && cp Master/hfs.main Users/%s/%s/hfs.main && cp Master/hfs.sec Users/%s/%s/hfs.sec && cp Master/static_tc Users/%s/%s/static_tc",owner,vmid,owner,vmid,owner,vmid,owner,vmid,owner,vmid,owner,vmid,owner,vmid);
+        printf("%s",copyxnu);
+        if(macos_run_ge(copyxnu)==0){
             printf("Master Image Copy Success\n");
             //Set Custom Port
             char attach[BUFF];
