@@ -8,6 +8,21 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+
+void prereq(){
+    system("sudo xcode-select --install");
+    system("/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)\"");
+    system("brew install pkg-config");
+    system("brew install glib");
+    system("brew install pixman");
+    system("brew tap SergioBenitez/osxct");
+    system("brew install aarch64-none-elf");
+    system("sudo easy_install pip");
+    system("pip3 install pyasn1");
+    system("pip install pyasn1");
+}
+
 //iOS Exec Handler, run command return 1st line
 char *ios_run_comm(char *command,char *port){
     char *com1 = "sshpass -p";

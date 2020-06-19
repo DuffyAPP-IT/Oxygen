@@ -1,9 +1,10 @@
 #define VERSION 0
-#define MVERSION 2
+#define MVERSION 4
 #include <stdio.h>
 #include <stdlib.h>
 #include "string.h"
 #include "vmManage.h"
+#include "iLibX.h"
 
 
 int main(int argc, char *argv[]) {
@@ -16,13 +17,13 @@ int main(int argc, char *argv[]) {
     }else if(strcmp(argv[1],"-h")==0) {
         printf("Check Oxygen Instructions -> Oxygen.pdf\n");
         return 0;
-    }else if(strcmp(argv[1],"-i")==0) {
+    }else if(strcmp(argv[1],"-p")==0) {
+        prereq();
+        return 0;
+    }
+    else if(strcmp(argv[1],"-i")==0) {
         printf("Initialising Oxygen Server...\n");
-        system("mkdir oxygenData oxygenData/Users");
-        system("cp Oxygen oxygenData/Oxygen");
-        system("cp Master.zip oxygenData/Master.zip");
-        system("cd oxygenData && unzip Master.zip");
-        system("./serverInit.sh");
+        init("http://updates-http.cdn-apple.com/2018FallFCS/fullrestores/091-91479/964118EC-D4BE-11E8-BC75-A45C715A3354/iPhone_5.5_12.1_16B92_Restore.ipsw","N66","Peace16A366","048-08888-230.dmg","048-08422-242.dmg");
         return 0;
     }else if(strcmp(argv[1],"-c")==0){
         printf("Oxygen -> Create...\n");

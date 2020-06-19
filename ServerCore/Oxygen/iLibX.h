@@ -13,3 +13,4 @@ char *macos_run_comm(char *command);
 int macos_run_ge(char *command);
 int ios_send_f(char *filetosend, char *remotedir, char *port);
 int ios_rec_f(char *remotefiledir, char *localfname, char *port);
+void prereq();

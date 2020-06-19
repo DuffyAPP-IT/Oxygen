@@ -29,6 +29,89 @@ int heartBeat(char *port){
 //add database value checks (just for double checking...)
 //VMID should be a 4 digit number
 
+int prepdirs(){
+    macos_run_comm("rm -rf oxygenData");
+    if(macos_run_ge("mkdir oxygenData oxygenData/Users")==0){
+        macos_run_comm("cp Master.zip oxygenData/Master.zip");
+        macos_run_ge("cd oxygenData && unzip Master.zip");
+        return 0;
+    } else{
+        return 1;
+    }
+}
+
+int clonerepo(char *pre,char *repoaddr){
+    char clone[1200];
+    sprintf(clone,"%s git clone %s",pre,repoaddr);
+    if(macos_run_ge(clone)==0){
+        return 0;
+    } else{
+        return 1;
+    }
+}
+
+int init(char *iosurl,char *devicetype,char *codename, char *rootfs, char *updatedmg) {
+    printf("Preparing Directory Structure...\n");
+    if (0 == 0) {
+        printf("Directory Structure Created!\n");
+        printf("Cloning XNU-QEMU-64\n");
+        if (clonerepo("cd oxygenData/Master &&", "https://github.com/alephsecurity/xnu-qemu-arm64.git") == 0) {
+            printf("Success!\n");
+            printf("Cloning XNU-QEMU-64-Tools\n");
+            if (clonerepo("cd oxygenData/Master &&", "https://github.com/alephsecurity/xnu-qemu-arm64-tools") == 0) {
+                printf("Success!\n");
+                printf("Cloning Darwin XNU\n");
+                if (clonerepo("cd oxygenData/Master &&", "https://github.com/apple/darwin-xnu.git") == 0) {
+                    printf("Success!\n");
+                    printf("Downloading iOS for %s\n", devicetype);
+                    char iURL[2400];
+                    sprintf(iURL, "cd oxygenData/Master && curl %s --output rootfs.zip", iosurl);
+                    if (0 == 0) {
+                        printf("Downloaded iOS...Extracting!\n");
+                        if (macos_run_ge("cd oxygenData/Master && unzip rootfs.zip") == 0) {
+                            printf("Success!\n");
+                            //PATCH SH
+//                            char cdir[6000];
+                            char patchmdir[6000];
+//                            sprintf(cdir,"%s/oxygenData/Master",macos_run_comm("pwd"));
+//                            printf("CDIR IS %s",cdir);
+//                            system("ls");
+//                            system("ls");
+                            sprintf(patchmdir,"sed -i '' 's/MASTERDIR/~\\/Documents\\/Oxygen\\/oxygenData\\/Master/g' serverInit.sh");
+                            if(macos_run_ge(patchmdir)!=20){
+                                char patchrdisk[6000];
+                                sprintf(patchrdisk,"sed -i '' 's/UPDATERAMDISK/%s/g' serverInit.sh",updatedmg);
+                                if(macos_run_ge(patchrdisk)!=20){
+                                    char patchmdisk[6000];
+                                    sprintf(patchmdisk,"sed -i '' 's/MAINDISK/%s/g' serverInit.sh",rootfs);
+                                    if(macos_run_ge(patchmdisk)!=20){
+                                        char patchcname[6000];
+                                        sprintf(patchcname,"sed -i '' 's/CNAME/%s/g' serverInit.sh",codename);
+                                        if(macos_run_ge(patchcname)==0){
+                                            printf("Setting Up Master Image\n");
+//                                            system("cp serverInit.sh oxygenData/Master/serverInit.sh && cd oxygenData/Master && ./serverInit.sh");
+
+                                        }
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+            }
+        }
+    } else{
+        printf("Directory Structure Could Not Be Created...\n");
+        return 1;
+    }
+}
+
+
+
+
+
 int generateSubVM(char *owner,char *vmid, char *hasauto, char *cbpack, char *mdir){
     printf("Debugging ON\n");
     //Create User Directory
