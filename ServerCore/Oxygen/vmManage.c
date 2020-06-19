@@ -52,7 +52,7 @@ int clonerepo(char *pre,char *repoaddr){
 
 int init(char *iosurl,char *devicetype,char *codename, char *rootfs, char *updatedmg) {
     printf("Preparing Directory Structure...\n");
-    if (0 == 0) {
+    if (prepdirs()==0) {
         printf("Directory Structure Created!\n");
         printf("Cloning XNU-QEMU-64\n");
         if (clonerepo("cd oxygenData/Master &&", "https://github.com/alephsecurity/xnu-qemu-arm64.git") == 0) {
@@ -66,30 +66,24 @@ int init(char *iosurl,char *devicetype,char *codename, char *rootfs, char *updat
                     printf("Downloading iOS for %s\n", devicetype);
                     char iURL[2400];
                     sprintf(iURL, "cd oxygenData/Master && curl %s --output rootfs.zip", iosurl);
-                    if (0 == 0) {
+                    if (macos_run_ge(iURL)==0) {
                         printf("Downloaded iOS...Extracting!\n");
                         if (macos_run_ge("cd oxygenData/Master && unzip rootfs.zip") == 0) {
                             printf("Success!\n");
-                            //PATCH SH
-//                            char cdir[6000];
                             char patchmdir[6000];
-//                            sprintf(cdir,"%s/oxygenData/Master",macos_run_comm("pwd"));
-//                            printf("CDIR IS %s",cdir);
-//                            system("ls");
-//                            system("ls");
-                            sprintf(patchmdir,"sed -i '' 's/MASTERDIR/~\\/Documents\\/Oxygen\\/oxygenData\\/Master/g' serverInit.sh");
+                            sprintf(patchmdir,"sed -i '' 's/MASTERDIR/~\\/Documents\\/Oxygen\\/oxygenData\\/Master/g' oxygenData/Master/serverInit.sh");
                             if(macos_run_ge(patchmdir)!=20){
                                 char patchrdisk[6000];
-                                sprintf(patchrdisk,"sed -i '' 's/UPDATERAMDISK/%s/g' serverInit.sh",updatedmg);
+                                sprintf(patchrdisk,"sed -i '' 's/UPDATERAMDISK/%s/g' oxygenData/Master/serverInit.sh",updatedmg);
                                 if(macos_run_ge(patchrdisk)!=20){
                                     char patchmdisk[6000];
-                                    sprintf(patchmdisk,"sed -i '' 's/MAINDISK/%s/g' serverInit.sh",rootfs);
+                                    sprintf(patchmdisk,"sed -i '' 's/MAINDISK/%s/g' oxygenData/Master/serverInit.sh",rootfs);
                                     if(macos_run_ge(patchmdisk)!=20){
                                         char patchcname[6000];
-                                        sprintf(patchcname,"sed -i '' 's/CNAME/%s/g' serverInit.sh",codename);
+                                        sprintf(patchcname,"sed -i '' 's/CNAME/%s/g' oxygenData/Master/serverInit.sh",codename);
                                         if(macos_run_ge(patchcname)==0){
                                             printf("Setting Up Master Image\n");
-//                                            system("cp serverInit.sh oxygenData/Master/serverInit.sh && cd oxygenData/Master && ./serverInit.sh");
+                                            system("cd oxygenData/Master && ./serverInit.sh");
 
                                         }
                                     }

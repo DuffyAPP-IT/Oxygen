@@ -3,9 +3,6 @@ echo =========================
 echo oxygenCore - Main Image - DuffyAPP_IT
 echo =========================
 
-
-cd oxygenData/Master
-
 python xnu-qemu-arm64-tools/bootstrap_scripts/asn1kerneldecode.py kernelcache.release.n66 kernelcache.release.n66.asn1decoded
 python3 xnu-qemu-arm64-tools/bootstrap_scripts/decompress_lzss.py kernelcache.release.n66.asn1decoded kernelcache.release.n66.out
 
@@ -23,7 +20,7 @@ echo Done!
 
 echo organising main disks...
 python xnu-qemu-arm64-tools/bootstrap_scripts/asn1rdskdecode.py ./UPDATERAMDISK ./UPDATERAMDISK.out
-cp ./UPDATERAMDISK.dmg.out ./hfs.main
+cp ./UPDATERAMDISK.out ./hfs.main
 hdiutil resize -size 6G -imagekey diskimage-class=CRawDiskImage ./hfs.main
 hdiutil attach -imagekey diskimage-class=CRawDiskImage ./hfs.main
 hdiutil attach ./MAINDISK
@@ -84,10 +81,10 @@ echo Done!
 hdiutil detach /Volumes/CNAME.arm64UpdateRamDisk
 hdiutil detach /Volumes/CNAME.N56N66OS
 
-cp ./UPDATERAMDISK.dmg.out ./hfs.sec
+cp ./UPDATERAMDISK.out ./hfs.sec
 hdiutil resize -size 6G -imagekey diskimage-class=CRawDiskImage ./hfs.sec
 hdiutil attach -imagekey diskimage-class=CRawDiskImage ./hfs.sec
-hdiutil attach ./MAINDISK.dmg
+hdiutil attach ./MAINDISK
 
 sudo rm -rf /Volumes/CNAME.arm64UpdateRamDisk/*
 sudo rsync -a /Volumes/CNAME.N56N66OS/private/var/* /Volumes/CNAME.arm64UpdateRamDisk/
