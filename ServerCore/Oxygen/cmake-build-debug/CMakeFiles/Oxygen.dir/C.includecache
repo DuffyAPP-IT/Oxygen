@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
+
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/serverInit.c
 stdio.h
 -
-stdlib.h
--
-string.h
-/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/string.h
+iLibX.h
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
 vmManage.h
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
 

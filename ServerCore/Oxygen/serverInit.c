@@ -76,9 +76,26 @@ int init(char *iosurl,char *devicetype,char *codename, char *rootfs, char *updat
                                                 printf("Decoding UPDATE Ramdisk...\n");
                                                 if(macos_run_ge(decUpdate)==0){
                                                     printf("Success!\n");
+                                                    char resmain[2400];
+                                                    sprintf(resmain,"chmod +x oxygenData/Master/resizeattachmain.sh && cd oxygenData/Master && ./resizeattachmain.sh");
+                                                    if(macos_run_ge(resmain)==0){
+                                                        printf("Resize & Attach Success!");
+                                                        char atroot[2400];
+                                                        sprintf(atroot,"hdiutil attach ./%s",rootfs);
+                                                        if(macos_run_ge(atroot)==0){
+                                                            printf("Mounted Root\n");
+                                                        } else{
+                                                            printf("Mount Root FAIL\n");
+                                                        }
 
+                                                    } else{
+                                                        printf("Failed to resize/attach disk...\n");
+                                                        return 1;
+                                                    }
+                                                } else{
+                                                    printf("Failed to decode UPDATE Ramdisk\n");
+                                                    return 1;
                                                 }
-
                                             } else{
                                                 printf("Failed Extracting Symbols\n");
                                                 return 1;
