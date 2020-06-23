@@ -8,9 +8,7 @@
 
 
 int main(int argc, char *argv[]) {
-    printf("//////////////////////\n");
-    printf("Project Oxygen V%d.%d\n",VERSION,MVERSION);
-    printf("//////////////////////\n");
+    printf("oxygenCore V%d.%d\n",VERSION,MVERSION);
     if(argv[1]==0){
         printf("Invalid Request To Oxygen...\n");
         return 1;
@@ -26,7 +24,6 @@ int main(int argc, char *argv[]) {
         init("http://updates-http.cdn-apple.com/2018FallFCS/fullrestores/091-91479/964118EC-D4BE-11E8-BC75-A45C715A3354/iPhone_5.5_12.1_16B92_Restore.ipsw","N66","PeaceB16B92","048-31952-103.dmg","048-32651-104.dmg");
         return 0;
     }else if(strcmp(argv[1],"-c")==0){
-        printf("Oxygen -> Create...\n");
         if(argv[2]==0){
             printf("Owner ID Not Supplied\n");
             return 1;
@@ -40,7 +37,6 @@ int main(int argc, char *argv[]) {
             printf("CBPack Info Not Supplied...\n");
             return 1;
         }
-        printf("Creating!\n");
         generateSubVM(argv[2],argv[3],argv[4],argv[2],"Master/*");
     }
     else if(strcmp(argv[1],"-s")==0){

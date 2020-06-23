@@ -20,5 +20,17 @@ vmManage.h
 iLibX.h
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
 
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c
+vmManage.h
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
+stdio.h
+-
+sys/wait.h
+-
+iLibX.h
+/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
+stdlib.h
+-
+
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
 
