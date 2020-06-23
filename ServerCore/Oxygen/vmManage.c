@@ -33,6 +33,7 @@ int prepdirs(){
     macos_run_comm("rm -rf oxygenData");
     if(macos_run_ge("mkdir oxygenData oxygenData/Users")==0){
         macos_run_comm("cp Master.zip oxygenData/Master.zip");
+        system("cp Oxygen oxygenData/Oxygen");
         macos_run_ge("cd oxygenData && unzip Master.zip");
         return 0;
     } else{

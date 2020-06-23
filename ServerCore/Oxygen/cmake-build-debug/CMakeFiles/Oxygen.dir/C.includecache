@@ -8,18 +8,6 @@
 
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
 
-/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c
-stdio.h
--
-stdlib.h
--
-string.h
-/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/string.h
-vmManage.h
-/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
-iLibX.h
-/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
-
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c
 vmManage.h
 /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
