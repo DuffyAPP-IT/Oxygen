@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen
+CMAKE_SOURCE_DIR = /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Oxygen.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/Oxygen.dir/flags.make
 
 CMakeFiles/Oxygen.dir/main.c.o: CMakeFiles/Oxygen.dir/flags.make
 CMakeFiles/Oxygen.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Oxygen.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Oxygen.dir/main.c.o   -c /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Oxygen.dir/main.c.o"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Oxygen.dir/main.c.o   -c /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c
 
 CMakeFiles/Oxygen.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Oxygen.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c > CMakeFiles/Oxygen.dir/main.c.i
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c > CMakeFiles/Oxygen.dir/main.c.i
 
 CMakeFiles/Oxygen.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Oxygen.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c -o CMakeFiles/Oxygen.dir/main.c.s
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c -o CMakeFiles/Oxygen.dir/main.c.s
 
 CMakeFiles/Oxygen.dir/vmManage.c.o: CMakeFiles/Oxygen.dir/flags.make
 CMakeFiles/Oxygen.dir/vmManage.c.o: ../vmManage.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Oxygen.dir/vmManage.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Oxygen.dir/vmManage.c.o   -c /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Oxygen.dir/vmManage.c.o"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Oxygen.dir/vmManage.c.o   -c /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c
 
 CMakeFiles/Oxygen.dir/vmManage.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Oxygen.dir/vmManage.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c > CMakeFiles/Oxygen.dir/vmManage.c.i
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c > CMakeFiles/Oxygen.dir/vmManage.c.i
 
 CMakeFiles/Oxygen.dir/vmManage.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Oxygen.dir/vmManage.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c -o CMakeFiles/Oxygen.dir/vmManage.c.s
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c -o CMakeFiles/Oxygen.dir/vmManage.c.s
 
 CMakeFiles/Oxygen.dir/iLibX.c.o: CMakeFiles/Oxygen.dir/flags.make
 CMakeFiles/Oxygen.dir/iLibX.c.o: ../iLibX.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Oxygen.dir/iLibX.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Oxygen.dir/iLibX.c.o   -c /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Oxygen.dir/iLibX.c.o"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Oxygen.dir/iLibX.c.o   -c /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c
 
 CMakeFiles/Oxygen.dir/iLibX.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Oxygen.dir/iLibX.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c > CMakeFiles/Oxygen.dir/iLibX.c.i
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c > CMakeFiles/Oxygen.dir/iLibX.c.i
 
 CMakeFiles/Oxygen.dir/iLibX.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Oxygen.dir/iLibX.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c -o CMakeFiles/Oxygen.dir/iLibX.c.s
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c -o CMakeFiles/Oxygen.dir/iLibX.c.s
 
 # Object files for target Oxygen
 Oxygen_OBJECTS = \
@@ -110,7 +110,7 @@ Oxygen: CMakeFiles/Oxygen.dir/vmManage.c.o
 Oxygen: CMakeFiles/Oxygen.dir/iLibX.c.o
 Oxygen: CMakeFiles/Oxygen.dir/build.make
 Oxygen: CMakeFiles/Oxygen.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable Oxygen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable Oxygen"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Oxygen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/Oxygen.dir/clean:
 .PHONY : CMakeFiles/Oxygen.dir/clean
 
 CMakeFiles/Oxygen.dir/depend:
-	cd /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug /Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Oxygen.dir/depend
 

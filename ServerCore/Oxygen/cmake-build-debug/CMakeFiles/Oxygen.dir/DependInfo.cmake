@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c" "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/iLibX.c.o"
-  "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c" "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/main.c.o"
-  "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c" "/Users/jd/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/vmManage.c.o"
+  "/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c" "/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/iLibX.c.o"
+  "/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c" "/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/main.c.o"
+  "/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c" "/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/Oxygen.dir/vmManage.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
