@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.c
+iLibX.h
+/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.h
+iLibX.h
+/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.h
+stdio.h
+-
+sys/wait.h
+-
+stdlib.h
+-
+string.h
+-
+
+/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.h
+
+/Users/jamesduffy/CLionProjects/oxygenCore/vmManage.c
+vmManage.h
+/Users/jamesduffy/CLionProjects/oxygenCore/vmManage.h
+stdio.h
+-
+sys/wait.h
+-
+iLibX.h
+/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.h
+stdlib.h
+-
+
+/Users/jamesduffy/CLionProjects/oxygenCore/vmManage.h
+

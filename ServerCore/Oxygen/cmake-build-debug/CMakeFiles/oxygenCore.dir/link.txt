@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/oxygenCore.dir/main.c.o CMakeFiles/oxygenCore.dir/iLibX.c.o CMakeFiles/oxygenCore.dir/vmManage.c.o  -o oxygenCore 

@@ -1,0 +1,30 @@
+h1{
+    font-family: Arial;
+    text-align: center;
+    font-size: xx-large;
+}
+
+h2 {
+    font-family: Arial;
+    text-align: center;
+    font-size: x-large;
+}
+
+p {
+    font-family: Arial;
+    text-align: center;
+    font-size: large;
+}
+
+
+label {
+    font-family: Arial;
+    text-align: center;
+    font-size: large;
+}
+
+#loginf{
+    font-family: Arial;
+    text-align: center;
+    font-size: medium;
+}

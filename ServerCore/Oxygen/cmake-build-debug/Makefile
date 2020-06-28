@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen
+CMAKE_SOURCE_DIR = /Users/jamesduffy/CLionProjects/oxygenCore
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/CMakeFiles /Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Oxygen
+# Target rules for targets named oxygenCore
 
 # Build rule for target.
-Oxygen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Oxygen
-.PHONY : Oxygen
+oxygenCore: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 oxygenCore
+.PHONY : oxygenCore
 
 # fast build rule for target.
-Oxygen/fast:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/build
-.PHONY : Oxygen/fast
+oxygenCore/fast:
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/build
+.PHONY : oxygenCore/fast
 
 iLibX.o: iLibX.c.o
 
@@ -129,7 +129,7 @@ iLibX.o: iLibX.c.o
 
 # target to build an object file
 iLibX.c.o:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/iLibX.c.o
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/iLibX.c.o
 .PHONY : iLibX.c.o
 
 iLibX.i: iLibX.c.i
@@ -138,7 +138,7 @@ iLibX.i: iLibX.c.i
 
 # target to preprocess a source file
 iLibX.c.i:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/iLibX.c.i
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/iLibX.c.i
 .PHONY : iLibX.c.i
 
 iLibX.s: iLibX.c.s
@@ -147,7 +147,7 @@ iLibX.s: iLibX.c.s
 
 # target to generate assembly for a file
 iLibX.c.s:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/iLibX.c.s
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/iLibX.c.s
 .PHONY : iLibX.c.s
 
 main.o: main.c.o
@@ -156,7 +156,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/main.c.o
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -165,7 +165,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/main.c.i
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -174,7 +174,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/main.c.s
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/main.c.s
 .PHONY : main.c.s
 
 vmManage.o: vmManage.c.o
@@ -183,7 +183,7 @@ vmManage.o: vmManage.c.o
 
 # target to build an object file
 vmManage.c.o:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/vmManage.c.o
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/vmManage.c.o
 .PHONY : vmManage.c.o
 
 vmManage.i: vmManage.c.i
@@ -192,7 +192,7 @@ vmManage.i: vmManage.c.i
 
 # target to preprocess a source file
 vmManage.c.i:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/vmManage.c.i
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/vmManage.c.i
 .PHONY : vmManage.c.i
 
 vmManage.s: vmManage.c.s
@@ -201,7 +201,7 @@ vmManage.s: vmManage.c.s
 
 # target to generate assembly for a file
 vmManage.c.s:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/vmManage.c.s
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/vmManage.c.s
 .PHONY : vmManage.c.s
 
 # Help Target
@@ -212,7 +212,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Oxygen"
+	@echo "... oxygenCore"
 	@echo "... iLibX.o"
 	@echo "... iLibX.i"
 	@echo "... iLibX.s"

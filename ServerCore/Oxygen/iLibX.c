@@ -1,4 +1,9 @@
 //
+// Created by James Duffy on 28/06/2020.
+//
+
+#include "iLibX.h"
+//
 // Created by 010010 on 15/06/2020.
 //
 
@@ -14,6 +19,7 @@ void prereq(){
     system("sudo xcode-select --install");
     system("/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)\"");
     system("brew install pkg-config");
+    system("brew install python3");
     system("brew install glib");
     system("brew install pixman");
     system("brew tap SergioBenitez/osxct");

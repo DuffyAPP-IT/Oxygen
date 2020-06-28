@@ -1,5 +1,7 @@
+#include <stdio.h>
+
 #define VERSION 0
-#define MVERSION 5
+#define MVERSION 6
 #include <stdio.h>
 #include <stdlib.h>
 #include "string.h"
@@ -10,10 +12,9 @@
 int main(int argc, char *argv[]) {
     printf("oxygenCore V%d.%d\n",VERSION,MVERSION);
     if(argv[1]==0){
-        printf("Invalid Request To Oxygen...\n");
         return 1;
     }else if(strcmp(argv[1],"-h")==0) {
-        printf("Check Oxygen Instructions -> Oxygen.pdf\n");
+        printf("Check Oxygen Instructions\n");
         return 0;
     }else if(strcmp(argv[1],"-p")==0) {
         prereq();
@@ -37,7 +38,7 @@ int main(int argc, char *argv[]) {
             printf("CBPack Info Not Supplied...\n");
             return 1;
         }
-        generateSubVM(argv[2],argv[3],argv[4],argv[2],"Master/*");
+        generateSubVM(argv[2],argv[3],argv[4],argv[5],"Master/*");
     }
     else if(strcmp(argv[1],"-s")==0){
         //verify owner and vmid are present...
@@ -46,6 +47,6 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
-        //generate random number to return as main output? file with info maybe
+    //generate random number to return as main output? file with info maybe
     return 0;
 }

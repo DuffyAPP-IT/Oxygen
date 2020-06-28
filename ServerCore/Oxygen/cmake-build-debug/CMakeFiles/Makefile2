@@ -44,16 +44,16 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen
+CMAKE_SOURCE_DIR = /Users/jamesduffy/CLionProjects/oxygenCore
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Oxygen.dir/all
+all: CMakeFiles/oxygenCore.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Oxygen.dir/clean
+clean: CMakeFiles/oxygenCore.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Oxygen.dir
+# Target rules for target CMakeFiles/oxygenCore.dir
 
 # All Build rule for target.
-CMakeFiles/Oxygen.dir/all:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/depend
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target Oxygen"
-.PHONY : CMakeFiles/Oxygen.dir/all
+CMakeFiles/oxygenCore.dir/all:
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/depend
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target oxygenCore"
+.PHONY : CMakeFiles/oxygenCore.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Oxygen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Oxygen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/Oxygen.dir/rule
+CMakeFiles/oxygenCore.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/oxygenCore.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/oxygenCore.dir/rule
 
 # Convenience name for target.
-Oxygen: CMakeFiles/Oxygen.dir/rule
+oxygenCore: CMakeFiles/oxygenCore.dir/rule
 
-.PHONY : Oxygen
+.PHONY : oxygenCore
 
 # clean rule for target.
-CMakeFiles/Oxygen.dir/clean:
-	$(MAKE) -f CMakeFiles/Oxygen.dir/build.make CMakeFiles/Oxygen.dir/clean
-.PHONY : CMakeFiles/Oxygen.dir/clean
+CMakeFiles/oxygenCore.dir/clean:
+	$(MAKE) -f CMakeFiles/oxygenCore.dir/build.make CMakeFiles/oxygenCore.dir/clean
+.PHONY : CMakeFiles/oxygenCore.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
