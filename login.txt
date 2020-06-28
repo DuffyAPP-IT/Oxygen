@@ -1,0 +1,48 @@
+-- Adminer 4.7.1 MySQL dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+SET NAMES utf8mb4;
+
+DROP TABLE IF EXISTS `Applications`;
+CREATE TABLE `Applications` (
+  `AppName` varchar(20) NOT NULL,
+  `IsLive` int(2) unsigned NOT NULL DEFAULT 0,
+  `CLevelRequired` int(10) unsigned NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `Applications` (`AppName`, `IsLive`, `CLevelRequired`) VALUES
+('',	0,	0),
+('Internal',	1,	5),
+('E-Test',	1,	3),
+('IT',	1,	1),
+('SysInfo',	0,	5),
+('TestAPP',	1,	50),
+('iAPP',	1,	70);
+
+DROP TABLE IF EXISTS `PASS`;
+CREATE TABLE `PASS` (
+  `ID` int(11) NOT NULL,
+  `Password` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `PASS` (`ID`, `Password`) VALUES
+(0,	'yeet');
+
+DROP TABLE IF EXISTS `Users`;
+CREATE TABLE `Users` (
+  `UName` text NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `vmLimit` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `Users` (`UName`, `ID`, `vmLimit`) VALUES
+('Admin',	1,	0),
+('admin1',	3,	0),
+('test',	4,	0);
+
+-- 2020-06-28 08:33:07
