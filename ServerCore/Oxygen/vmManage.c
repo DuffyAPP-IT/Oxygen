@@ -72,7 +72,7 @@ int init(char *iosurl,char *devicetype,char *codename, char *rootfs, char *updat
                         if (macos_run_ge("cd oxygenData/Master && unzip rootfs.zip") == 0) {
                             printf("Success!\n");
                             char patchmdir[6000];
-                            sprintf(patchmdir,"sed -i '' 's/MASTERDIR/\\/Users\\/Oxygen\\/Documents\\/Oxygen\\/OxygenData\\/Master/g' oxygenData/Master/serverInit.sh");
+                            sprintf(patchmdir,"sed -i '' 's/MASTERDIR/\\/Users\\/oxygen\\/Documents\\/Oxygen\\/OxygenData\\/Master/g' oxygenData/Master/serverInit.sh");
                             if(macos_run_ge(patchmdir)!=20){
                                 char patchrdisk[6000];
                                 sprintf(patchrdisk,"sed -i '' 's/UPDATERAMDISK/%s/g' oxygenData/Master/serverInit.sh",updatedmg);

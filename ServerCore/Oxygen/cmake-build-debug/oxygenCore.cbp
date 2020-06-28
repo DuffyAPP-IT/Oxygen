@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug"/>
+				<Option working_dir="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug"/>
+				<Option working_dir="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug"/>
+				<Option working_dir="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="oxygenCore">
-				<Option output="/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/oxygenCore" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug"/>
+				<Option output="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/oxygenCore" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 oxygenCore"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 oxygenCore"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="oxygenCore/fast">
-				<Option output="/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/oxygenCore" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug"/>
+				<Option output="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/oxygenCore" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,29 +73,29 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 oxygenCore/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/CLionProjects/oxygenCore/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 oxygenCore/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.c">
+		<Unit filename="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c">
 			<Option target="oxygenCore"/>
 		</Unit>
-		<Unit filename="/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.h">
+		<Unit filename="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h">
 			<Option target="oxygenCore"/>
 		</Unit>
-		<Unit filename="/Users/jamesduffy/CLionProjects/oxygenCore/main.c">
+		<Unit filename="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c">
 			<Option target="oxygenCore"/>
 		</Unit>
-		<Unit filename="/Users/jamesduffy/CLionProjects/oxygenCore/vmManage.c">
+		<Unit filename="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c">
 			<Option target="oxygenCore"/>
 		</Unit>
-		<Unit filename="/Users/jamesduffy/CLionProjects/oxygenCore/vmManage.h">
+		<Unit filename="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h">
 			<Option target="oxygenCore"/>
 		</Unit>
-		<Unit filename="/Users/jamesduffy/CLionProjects/oxygenCore/CMakeLists.txt">
+		<Unit filename="/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

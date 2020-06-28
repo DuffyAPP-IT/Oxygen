@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.c
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.c
 iLibX.h
-/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.h
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
 iLibX.h
-/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.h
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
 stdio.h
 -
 sys/wait.h
@@ -20,19 +20,33 @@ stdlib.h
 string.h
 -
 
-/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.h
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
 
-/Users/jamesduffy/CLionProjects/oxygenCore/vmManage.c
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/main.c
+stdio.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/string.h
 vmManage.h
-/Users/jamesduffy/CLionProjects/oxygenCore/vmManage.h
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
+iLibX.h
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
+
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.c
+vmManage.h
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
 stdio.h
 -
 sys/wait.h
 -
 iLibX.h
-/Users/jamesduffy/CLionProjects/oxygenCore/iLibX.h
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/iLibX.h
 stdlib.h
 -
 
-/Users/jamesduffy/CLionProjects/oxygenCore/vmManage.h
+/Users/jamesduffy/Documents/GitHub/Oxygen/ServerCore/Oxygen/vmManage.h
 

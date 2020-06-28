@@ -22,7 +22,7 @@
                 echo "<p>Welcome to Oxygen, <b>".$row['UName']."</b></p>";
                 $limit = $row['vmLimit'];
                 echo "<p>VMID $password sent to oxygenCore.</p>";
-                $create = "cd /Users/Oxygen/Documents/Oxygen/oxygenData && echo VM Starting && sudo ./Oxygen -s ".$row['ID']." ".$password."";
+                $create = "cd /Users/oxygen/Documents/Oxygen/oxygenData && echo VM Starting && sudo ./Oxygen -s ".$row['ID']." ".$password."";
                 
                 include('Net/SSH2.php');
 
@@ -52,7 +52,7 @@
                     echo "<p>VMID $vmid sent to oxygenCore.</p>";
                     $com = "Creating iOS VM!".$vmid."!";
                     system($com);
-                    $create = "cd /Users/Oxygen/Documents/Oxygen/oxygenData && echo VM Initialised && sudo ./Oxygen -c ".$row['ID']." ".$vmid." 0 0";
+                    $create = "cd /Users/oxygen/Documents/Oxygen/oxygenData && echo VM Initialised && sudo ./Oxygen -c ".$row['ID']." ".$vmid." 0 0";
                     
                     include('Net/SSH2.php');
 
